@@ -33,7 +33,7 @@ const Header = ( {avatar, setAvatar} ) => {
                                 <Image
                                     borderRadius='full'
                                     boxSize='40px'
-                                    src={avatar}
+                                    src='https://bit.ly/dan-abramov'
                                     alt='Dan Abramov'
                                     />
                                 <Flex alignItems='top'>

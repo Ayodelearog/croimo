@@ -20,11 +20,10 @@ const DashboardLayout = ({ children }) => {
     const handleAvatarChange = (e) => {
       const selectedFile = e.target.files[0];
       console.log(selectedFile)
-      setAvatar(URL.createObjectURL(selectedFile)); // Display the selected image
+      setAvatar(URL.createObjectURL(selectedFile)); 
     };
 
     return (
-        // <Router>
             <Grid templateColumns='16% 84%' gap={4} h='100vh' >
                 <GridItem py='3rem' px='1rem' pr='2rem' bg='white' as='aside'>
                     <Box><Heading as='h3' fontSize='1.5rem'>Croimo Logo</Heading></Box>
@@ -39,7 +38,6 @@ const DashboardLayout = ({ children }) => {
                     </Box>
                 </GridItem>
             </Grid>
-        // </Router>
     );
 }
 export default DashboardLayout;

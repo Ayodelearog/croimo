@@ -18,3 +18,30 @@
 .active > p {
   color: #3f9f98;
 }
+
+.file-upload-label {
+  display: inline-block;
+  width: 40%;
+  padding: .6rem 1rem;
+  background-color: white;
+  color: #3f9f98;
+  border: 2px dotted rgb(165, 165, 165);
+  border-radius: 0.5rem;
+  font-size: .8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+}
+
+.file-upload-label:hover {
+  background-color: #ecf5f5;
+}
+
+.file-upload-input {
+  display: none;
+}
+
+
+/* bg='white' width='40%' color='#3f9f98' paddingX='1rem' py='1rem' variant='outline' 
+                                border='2px' borderColor='gray.400' borderStyle='dotted' fontSize='.8rem' fontWeight='700' 
+                                borderRadius='.5rem' */

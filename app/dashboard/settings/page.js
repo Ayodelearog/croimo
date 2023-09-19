@@ -21,6 +21,10 @@ const Settings = () => {
       setAvatar(URL.createObjectURL(selectedFile)); // Display the selected image
     };
 
+    const handleRemove = () => {
+        setAvatar(null);
+    }
+
     return (
         <Box mt='1.2rem' pX='2rem' pb='6rem'>
             <Heading as='h3' fontSize='1.2rem' fontWeight='500' mb='1.5rem'>Account Settings</Heading>
@@ -71,7 +75,10 @@ const Settings = () => {
                         />
 
                         <Flex gap={4} width='50%' justifyContent='flex-end' alignItems='center'>
-                            <input type="file" name="fileUpload" id=""  onChange={handleAvatarChange} />
+                            <label htmlFor="fileUpload" className="file-upload-label"  >
+                                Change photo
+                                <Input className="file-upload-input" type="file" name="fileUpload" id="fileUpload" onChange={handleAvatarChange} />
+                            </label>
 
                             {/* <Button leftIcon={<AiFillPicture />} bg='white' width='40%' color='#3f9f98' 
                             paddingX='1rem' py='1rem' variant='outline' border='2px' borderColor='gray.400'
@@ -79,11 +86,11 @@ const Settings = () => {
                                 Change Photo
                             </Button> */}
 
-                            {/* <Button bg='white' width='40%' color='black' 
+                            <Button bg='white' width='40%' color='black' 
                             paddingX='.2rem' py='1rem' variant='ghost' borderStyle='dotted' fontSize='.8rem' 
-                            fontWeight='700' borderRadius='.5rem'>
+                            fontWeight='700' borderRadius='.5rem' onClick={handleRemove}>
                                 Remove
-                            </Button> */}
+                            </Button>
                         </Flex>
                     </Flex>
 
