@@ -1,3 +1,4 @@
+'use client'
 import { Box, Flex, Heading, Image, Link, Text, leftIcon, Button, Input, InputGroup } from "@chakra-ui/react";
 
 import { FaUser } from '@react-icons/all-files/fa/FaUser'
@@ -6,10 +7,20 @@ import { BsFillBellFill } from '@react-icons/all-files/bs/BsFillBellFill'
 import { GiPadlock } from '@react-icons/all-files/gi/GiPadlock'
 import { RiVerifiedBadgeFill } from 'react-icons/ri'
 import { v4 as uuidv4 } from 'uuid';
+import { useState } from "react";
 
 
 
 const Settings = () => {
+   
+    const [avatar, setAvatar] = useState(null);
+
+    const handleAvatarChange = (e) => {
+      const selectedFile = e.target.files[0];
+      console.log(selectedFile)
+      setAvatar(URL.createObjectURL(selectedFile)); // Display the selected image
+    };
+
     return (
         <Box mt='1.2rem' pX='2rem' pb='6rem'>
             <Heading as='h3' fontSize='1.2rem' fontWeight='500' mb='1.5rem'>Account Settings</Heading>
@@ -53,24 +64,26 @@ const Settings = () => {
                         <Image
                             borderRadius='full'
                             boxSize='80px'
-                            src='https://bit.ly/dan-abramov'
+                            src={avatar}
                             alt='Dan Abramov'
                             border='1px'
                             borderColor='black'
                         />
 
                         <Flex gap={4} width='50%' justifyContent='flex-end' alignItems='center'>
-                            <Button leftIcon={<AiFillPicture />} bg='white' width='40%' color='#3f9f98' 
+                            <input type="file" name="fileUpload" id=""  onChange={handleAvatarChange} />
+
+                            {/* <Button leftIcon={<AiFillPicture />} bg='white' width='40%' color='#3f9f98' 
                             paddingX='1rem' py='1rem' variant='outline' border='2px' borderColor='gray.400'
                             borderStyle='dotted' fontSize='.8rem' fontWeight='700' borderRadius='.5rem'>
                                 Change Photo
-                            </Button>
+                            </Button> */}
 
-                            <Button bg='white' width='40%' color='black' 
+                            {/* <Button bg='white' width='40%' color='black' 
                             paddingX='.2rem' py='1rem' variant='ghost' borderStyle='dotted' fontSize='.8rem' 
                             fontWeight='700' borderRadius='.5rem'>
                                 Remove
-                            </Button>
+                            </Button> */}
                         </Flex>
                     </Flex>
 

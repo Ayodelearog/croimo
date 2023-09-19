@@ -7,9 +7,9 @@ import { RiArrowDropDownLine } from 'react-icons/ri'
 import { useParams } from "react-router-dom";
 
 
-const Header = () => {
-    const routeParams = useParams();
-    
+const Header = ( {avatar, setAvatar} ) => {
+    // const routeParams = useParams();
+
     return (
         <Box width='100%' display='flex' justifyContent='center' pb='1rem'>
                     <Flex  justifyContent='space-between' alignItems='flex-start' width='100%'>
@@ -33,7 +33,7 @@ const Header = () => {
                                 <Image
                                     borderRadius='full'
                                     boxSize='40px'
-                                    src='https://bit.ly/dan-abramov'
+                                    src={avatar}
                                     alt='Dan Abramov'
                                     />
                                 <Flex alignItems='top'>

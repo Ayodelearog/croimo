@@ -4,3 +4,17 @@
   box-sizing: border-box;
   overflow: hidden;
 }
+
+.active {
+  color: #3f9f98;
+  background-color: #ecf5f5;
+  border-radius: 1rem;
+}
+
+.active > div > svg {
+  color: #3f9f98;
+}
+
+.active > p {
+  color: #3f9f98;
+}

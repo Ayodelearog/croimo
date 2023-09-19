@@ -46,9 +46,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={raleway.className}>
         <Providers>
-        {/* <ChakraProvider theme={theme}> */}
           {children}
-        {/* </ChakraProvider> */}
         </Providers>
       </body>
     </html>
