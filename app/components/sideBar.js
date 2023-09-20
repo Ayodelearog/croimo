@@ -28,44 +28,39 @@ const SideBar = ({ dashId, settId }) => {
         <VStack spacing='.5rem' my='3.5rem' width='max-content'>
             <Link as={NextLink} href="/dashboard" width='100%' textDecorationLine='none' 
             _hover={{textDecorationLine:'none'}} className={currentRoute === '/dashboard' ? 'active' : ''}>
-                <Flex alignItems='center' w='100%' gap={2} p='1rem' borderRadius='1rem' cursor='pointer'
-                 _hover={{bg:'#ecf5f5', color:'#3f9f98', transition: 'all .4s ease-in-out', textDecorationLine: 'none'}} id={dashId} >
-                        <MdDashboard color='#67689b' />
+                <Flex alignItems='center' w='100%' gap={2} p='1rem' borderRadius='1rem' cursor='pointer' className="sideBarBtn"
+                  id={dashId} >
+                        <MdDashboard color='#67689b' _hover={{color:'#3f9f98'}} />
                         <Text fontSize='1rem' fontWeight='600' color='#67689b'>Dashboard</Text>
                 </Flex>
             </Link>
-                <Flex alignItems='center' w='100%' gap={2} p='1rem' borderRadius='1rem' cursor='pointer' 
-                _hover={{bg:'#ecf5f5', color:'#3f9f98', transition: 'all .4s ease-in-out'}}>
+                <Flex alignItems='center' w='100%' gap={2} p='1rem' borderRadius='1rem' cursor='pointer' className="sideBarBtn" >
                     <BsCurrencyExchange color='#67689b' />
                     <Text fontSize='1rem' fontWeight='600' color='#67689b'>Convert Funds</Text>
                 </Flex>
-                <Flex alignItems='center' w='100%' gap={2} p='1rem' borderRadius='1rem' cursor='pointer' 
-                _hover={{bg:'#ecf5f5', color:'#3f9f98', transition: 'all .4s ease-in-out'}}>
+                <Flex alignItems='center' w='100%' gap={2} p='1rem' borderRadius='1rem' cursor='pointer' className="sideBarBtn" >
                     <IoWalletSharp color='#67689b' />
                     <Text fontSize='1rem' fontWeight='600' color='#67689b'>Wallets</Text>
                 </Flex>
-                <Flex alignItems='center' w='100%' gap={2} p='1rem' borderRadius='1rem' cursor='pointer' 
-                _hover={{bg:'#ecf5f5', color:'#3f9f98', transition: 'all .4s ease-in-out'}}>
+                <Flex alignItems='center' w='100%' gap={2} p='1rem' borderRadius='1rem' cursor='pointer' className="sideBarBtn" >
                     <AiOutlineTransaction color='#67689b' />
                     <Text fontSize='1rem' fontWeight='600' color='#67689b'>Transactions</Text>
                 </Flex>
-                <Flex alignItems='center' w='100%' gap={2} p='1rem' borderRadius='1rem' cursor='pointer' 
-                _hover={{bg:'#ecf5f5', color:'#3f9f98', transition: 'all .4s ease-in-out'}}>
+                <Flex alignItems='center' w='100%' gap={2} p='1rem' borderRadius='1rem' cursor='pointer' className="sideBarBtn" >
                     <IoIosCard color='#67689b' />
                     <Text fontSize='1rem' fontWeight='600' color='#67689b'>Cards & Recipients</Text>
                 </Flex>
 
                 <Link as={NextLink} href='/dashboard/settings' width='100%' _hover={{textDecorationLine:'none'}}
                 className={currentRoute === '/dashboard/settings' ? 'active' : ''}  >
-                    <Flex alignItems='center' w='100%' gap={2} p='1rem' borderRadius='1rem' cursor='pointer' 
-                    _hover={{bg:'#ecf5f5', color:'#3f9f98', transition: 'all .4s ease-in-out'}} id={settId} >
+                    <Flex alignItems='center' w='100%' gap={2} p='1rem' borderRadius='1rem' cursor='pointer' className="sideBarBtn" 
+                    id={settId} >
                         <IoMdSettings color='#67689b' />
                         <Text fontSize='1rem' fontWeight='600' color='#67689b'>Settings</Text>
                     </Flex>
                 </Link>
 
-                <Flex alignItems='center' w='100%' gap={2} p='1rem' borderRadius='1rem' cursor='pointer' 
-                _hover={{bg:'#ecf5f5', color:'#3f9f98', transition: 'all .4s ease-in-out'}}>
+                <Flex alignItems='center' w='100%' gap={2} p='1rem' borderRadius='1rem' cursor='pointer' className="sideBarBtn" >
                     <BiSolidLogOut color='#67689b' />
                     <Text fontSize='1rem' fontWeight='600' color='#67689b'>Log out</Text>
                 </Flex>

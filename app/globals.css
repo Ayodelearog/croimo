@@ -11,11 +11,11 @@
   border-radius: 1rem;
 }
 
-.active > div > svg {
+.active svg {
   color: #3f9f98;
 }
 
-.active > p {
+.active p {
   color: #3f9f98;
 }
 
@@ -40,6 +40,35 @@
 .file-upload-input {
   display: none;
 }
+
+.sideBarBtn:hover {
+  background-color: #ecf5f5;
+  color: #3f9f98;
+  transition: all .4s ease-in-out;
+}
+
+.sideBarBtn:hover > svg {
+  color: #3f9f98;
+  transition: all .4s ease-in-out;
+}
+
+.sideBarBtn:hover > p {
+  color: #3f9f98;
+  transition: all .4s ease-in-out;
+}
+
+.accountSettingsTab {
+  color: #3f9f98;
+  border-color: #3f9f98;
+}
+
+.accountSettingsTab > p {
+  color: #3f9f98;
+  /* border-color: #3f9f98; */
+}
+
+/* _active={{color: '#3f9f98', textColor: '#3f9f98', borderColor: '#3f9f98'}} */
+/* {bg:'#ecf5f5', color:'#3f9f98', transition: 'all .4s ease-in-out', textDecorationLine: 'none'} */
 
 
 /* bg='white' width='40%' color='#3f9f98' paddingX='1rem' py='1rem' variant='outline' 

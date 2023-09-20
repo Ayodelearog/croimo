@@ -14,6 +14,8 @@ import { useState } from "react";
 const Settings = () => {
    
     const [avatar, setAvatar] = useState(null);
+    const [isVisible, setIsVisible] = useState(false)
+    const [activeClass, setActiveClass] = useState(false)
 
     const handleAvatarChange = (e) => {
       const selectedFile = e.target.files[0];
@@ -23,6 +25,12 @@ const Settings = () => {
 
     const handleRemove = () => {
         setAvatar(null);
+        
+    }
+
+    const handleSettingsTabView = () => {
+        setIsVisible(!isVisible);
+        setActiveClass(!activeClass);
     }
 
     return (
@@ -32,8 +40,8 @@ const Settings = () => {
             <Flex w='100%' min-h='100vh' gap={10}>
                 <Flex width='25%' h='max-content' direction='column' gap={10} bg='white' pl='1.2rem' py='3rem' borderRadius='.5rem'>
 
-                    <Flex w='100%' alignItems='center' gap={8} color='gray.500' borderRight='4px' borderColor='white'
-                    _active={{color: '#3f9f98', textColor: '#3f9f98', borderColor: '#3f9f98'}} cursor='pointer' py='.5rem'>
+                    <Flex w='100%' alignItems='center' gap={8} color='gray.500' borderRight='4px' borderColor='white' className={activeClass ? 'accountSettingsTab' : ''}
+                    cursor='pointer' py='.5rem' onClick={handleSettingsTabView} >
                         <FaUser color='gray.500' />
                         <Text fontWeight='600' fontSize='1rem' color='gray.500'>Profile Info</Text>
                     </Flex>
@@ -57,6 +65,8 @@ const Settings = () => {
                     </Flex>
                 </Flex>
 
+                {/* right side components */}
+                {isVisible && 
                 <Flex width='65%' paddingX='4rem' paddingY='3rem' bg='white' borderRadius='.5rem' direction='column'>
                     <Flex>
                         <Link fontSize='.9rem' fontWeight='600' color='#3f9f98'
@@ -117,6 +127,7 @@ const Settings = () => {
                         </InputGroup>
                     </form>
                 </Flex>
+                }
             </Flex>
 
         </Box>
