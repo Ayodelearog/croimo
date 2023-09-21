@@ -67,6 +67,17 @@
   /* border-color: #3f9f98; */
 }
 
+.convertDropdownCont {
+  position: relative;
+  z-index: 1;
+}
+
+.convertDropdown {
+  position: absolute;
+  bottom: -3rem;
+  z-index: 4;
+}
+
 /* _active={{color: '#3f9f98', textColor: '#3f9f98', borderColor: '#3f9f98'}} */
 /* {bg:'#ecf5f5', color:'#3f9f98', transition: 'all .4s ease-in-out', textDecorationLine: 'none'} */
 

@@ -30,38 +30,48 @@ const SideBar = ({ dashId, settId }) => {
             _hover={{textDecorationLine:'none'}} className={currentRoute === '/dashboard' ? 'active' : ''}>
                 <Flex alignItems='center' w='100%' gap={2} p='1rem' borderRadius='1rem' cursor='pointer' className="sideBarBtn"
                   id={dashId} >
-                        <MdDashboard color='#67689b' _hover={{color:'#3f9f98'}} />
+                        <MdDashboard color='#67689b' fontSize='1.2rem' _hover={{color:'#3f9f98'}} />
                         <Text fontSize='1rem' fontWeight='600' color='#67689b'>Dashboard</Text>
                 </Flex>
             </Link>
+
+            <Link as={NextLink} href="/dashboard/convert_funds" width='100%' textDecorationLine='none' 
+            _hover={{textDecorationLine:'none'}} className={currentRoute === '/convert_funds' ? 'active' : ''}>   
                 <Flex alignItems='center' w='100%' gap={2} p='1rem' borderRadius='1rem' cursor='pointer' className="sideBarBtn" >
-                    <BsCurrencyExchange color='#67689b' />
+                    <BsCurrencyExchange color='#67689b' fontSize='1.2rem' />
                     <Text fontSize='1rem' fontWeight='600' color='#67689b'>Convert Funds</Text>
                 </Flex>
+            </Link>
+
                 <Flex alignItems='center' w='100%' gap={2} p='1rem' borderRadius='1rem' cursor='pointer' className="sideBarBtn" >
-                    <IoWalletSharp color='#67689b' />
+                    <IoWalletSharp color='#67689b' fontSize='1.2rem' />
                     <Text fontSize='1rem' fontWeight='600' color='#67689b'>Wallets</Text>
                 </Flex>
+
                 <Flex alignItems='center' w='100%' gap={2} p='1rem' borderRadius='1rem' cursor='pointer' className="sideBarBtn" >
-                    <AiOutlineTransaction color='#67689b' />
+                    <AiOutlineTransaction color='#67689b' fontSize='1.2rem' />
                     <Text fontSize='1rem' fontWeight='600' color='#67689b'>Transactions</Text>
                 </Flex>
-                <Flex alignItems='center' w='100%' gap={2} p='1rem' borderRadius='1rem' cursor='pointer' className="sideBarBtn" >
-                    <IoIosCard color='#67689b' />
-                    <Text fontSize='1rem' fontWeight='600' color='#67689b'>Cards & Recipients</Text>
-                </Flex>
+
+                <Link as={NextLink} href='/dashboard/cards&recipients' width='100%' _hover={{textDecorationLine:'none'}}
+                className={currentRoute === '/dashboard/cards&recipients' ? 'active' : ''}  >
+                    <Flex alignItems='center' w='100%' gap={2} p='1rem' borderRadius='1rem' cursor='pointer' className="sideBarBtn" >
+                        <IoIosCard color='#67689b' fontSize='1.2rem' />
+                        <Text fontSize='1rem' fontWeight='600' color='#67689b'>Cards & Recipients</Text>
+                    </Flex>
+                </Link>
 
                 <Link as={NextLink} href='/dashboard/settings' width='100%' _hover={{textDecorationLine:'none'}}
                 className={currentRoute === '/dashboard/settings' ? 'active' : ''}  >
                     <Flex alignItems='center' w='100%' gap={2} p='1rem' borderRadius='1rem' cursor='pointer' className="sideBarBtn" 
                     id={settId} >
-                        <IoMdSettings color='#67689b' />
+                        <IoMdSettings color='#67689b' fontSize='1.2rem' />
                         <Text fontSize='1rem' fontWeight='600' color='#67689b'>Settings</Text>
                     </Flex>
                 </Link>
 
                 <Flex alignItems='center' w='100%' gap={2} p='1rem' borderRadius='1rem' cursor='pointer' className="sideBarBtn" >
-                    <BiSolidLogOut color='#67689b' />
+                    <BiSolidLogOut color='#67689b' fontSize='1.2rem' />
                     <Text fontSize='1rem' fontWeight='600' color='#67689b'>Log out</Text>
                 </Flex>
         </VStack>

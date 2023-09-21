@@ -25,10 +25,10 @@ const Header = ( {avatar, setAvatar} ) => {
                         </InputGroup>
                         <HStack spacing='2rem'>
                             <Flex alignItems='center'>
-                                <HiChatAlt2 />
+                                <HiChatAlt2 fontSize='1.2rem' />
                                 <Link href="#" ml='.2rem' fontSize='.8rem'> Need help?</Link>
                             </Flex>
-                            <BsFillBellFill />
+                            <BsFillBellFill fontSize='1.2rem' />
                             <Flex alignItems='center' gap='1rem'>
                                 <Image
                                     borderRadius='full'
@@ -38,7 +38,7 @@ const Header = ( {avatar, setAvatar} ) => {
                                     />
                                 <Flex alignItems='top'>
                                     <Text>Tassy Omah</Text>
-                                    <RiArrowDropDownLine />
+                                    <RiArrowDropDownLine fontSize='1.2rem' />
                                 </Flex>
                             </Flex>
                         </HStack>
